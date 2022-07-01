@@ -1,0 +1,91 @@
+.row > * {
+  padding: 0;
+}
+.form {
+  font-family: "VT323", monospace;
+  width: 85%;
+  /* width: 300px; */
+  border-radius: 10px;
+  border-color: #fff;
+  margin-right: 2px;
+}
+.button {
+  font-family: "VT323", monospace;
+  font-size: 16px;
+  border-radius: 10px;
+  border-color: #fff;
+}
+.button-location {
+  margin-left: 55px;
+  margin: 0;
+}
+.app-body {
+  position: static;
+  border: 3px solid fff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 50%;
+  max-width: 630px;
+  min-width: 630px;
+  display: block;
+  margin: auto;
+  color: #fff;
+  background-image: url(https://c.tenor.com/TIUfh_o9hIUAAAAd/minimoss-pixel-art.gif);
+  background-size: cover;
+}
+.city {
+  padding-top: 50px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  font-family: "Press Start 2P", cursive;
+}
+.local-time {
+  margin-bottom: 60px;
+}
+.weather {
+  margin-right: 10px;
+  text-align: center;
+}
+.icon {
+  padding-top: 40px;
+  display: block;
+  margin: 0 auto;
+}
+.local-temp {
+  margin-top: 45px;
+  font-size: 70px;
+  font-family: "VT323", monospace;
+}
+.cel-fah {
+  font-size: 25px;
+  margin-top: 90px;
+  font-family: "VT323", monospace;
+}
+.cel-fah:hover {
+  cursor: pointer;
+}
+.celsius {
+  padding-left: 5px;
+  color: #ffda44;
+}
+.small-text {
+  font-size: 23px;
+  font-family: "VT323", monospace;
+}
+.week {
+  display: block;
+  margin: 0 auto;
+}
+.days {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+}
+.small-icon {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+.days-temp {
+  text-align: center;
+}
