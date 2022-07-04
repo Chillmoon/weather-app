@@ -55,6 +55,8 @@ function showTempAndCity(response) {
     `icons/${response.data.weather[0].icon}.png`
   );
   icon.setAttribute("alt", response.data.weather[0].main);
+  fahrenheit.style.color = "#fff";
+  celsius.style.color = "#ffda44";
 }
 
 function searchCity(city) {
