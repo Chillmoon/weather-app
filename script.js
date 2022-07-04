@@ -12,10 +12,13 @@ function myLocation(event) {
 function showTempAndCity(response) {
   let city = document.querySelector(".city");
   let weather = document.querySelector(".weather");
+  let humidity = document.querySelector(".humidity");
+  let wind = document.querySelector(".wind");
   city.innerHTML = response.data.name;
   temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   weather.innerHTML = response.data.weather[0].main;
-
+  humidity.innerHTML = response.data.main.humidity;
+  wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
   console.log(response.data);
 }
 function searchCity(event) {
@@ -50,9 +53,15 @@ let days = [
   "Saturday",
 ];
 let currentDate = document.querySelector(".local-time");
-currentDate.innerHTML = `${
-  days[date.getDay()]
-} ${date.getHours()}:${date.getMinutes()}`;
+let hours = date.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = date.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+currentDate.innerHTML = `${days[date.getDay()]} ${hours}:${minutes}`;
 
 let apiKey = "3f9633a1cb53043419b3d4f859581765";
 

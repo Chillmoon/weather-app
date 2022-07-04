@@ -52,7 +52,6 @@ a:hover {
   font-size: 30px;
   font-family: "Press Start 2P", cursive;
 }
-
 .weather {
   margin-right: 60px;
   text-align: center;
@@ -65,7 +64,6 @@ a:hover {
 .local-temp {
   padding-top: 40px;
 }
-
 .local-temp strong {
   font-weight: 400;
   margin-top: 45px;
