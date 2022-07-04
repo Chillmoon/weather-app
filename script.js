@@ -18,11 +18,17 @@ function showTempAndCity(response) {
   let weather = document.querySelector(".weather");
   let humidity = document.querySelector(".humidity");
   let wind = document.querySelector(".wind");
+  let icon = document.querySelector(".icon");
   city.innerHTML = response.data.name;
   temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   weather.innerHTML = response.data.weather[0].main;
   humidity.innerHTML = response.data.main.humidity;
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
+  icon.innerHTML = icon.setAttribute(
+    "src",
+    `icons/${response.data.weather[0].icon}.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].main);
   console.log(response.data);
 }
 function searchCity(city) {
