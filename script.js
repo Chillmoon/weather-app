@@ -4,7 +4,11 @@ function showPosition(position) {
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(url).then(showTempAndCity);
 }
-
+function searchInput(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector(".form");
+  searchCity(cityInput.value);
+}
 function myLocation(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
@@ -74,5 +78,5 @@ let celsius = document.querySelector(".celsius");
 celsius.addEventListener("click", toCelsius);
 
 let searchEngine = document.querySelector(".search-form");
-searchEngine.addEventListener("submit", searchCity);
+searchEngine.addEventListener("submit", searchInput);
 searchCity("Kyiv");
