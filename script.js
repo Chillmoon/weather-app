@@ -21,12 +21,9 @@ function showTempAndCity(response) {
   wind.innerHTML = `${Math.round(response.data.wind.speed)}`;
   console.log(response.data);
 }
-function searchCity(event) {
-  event.preventDefault();
-  let formValue = document.querySelector(".form");
-  let newCity = formValue.value;
+function searchCity(city) {
   let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${newCity}&appid=${apiKey}&units=${unit}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
   axios.get(apiUrl).then(showTempAndCity);
 }
 
@@ -78,3 +75,4 @@ celsius.addEventListener("click", toCelsius);
 
 let searchEngine = document.querySelector(".search-form");
 searchEngine.addEventListener("submit", searchCity);
+searchCity("Kyiv");
