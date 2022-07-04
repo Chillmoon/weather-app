@@ -1,16 +1,29 @@
+ul {
+  list-style: none;
+  padding: 0px;
+  line-height: 20px;
+  margin-bottom: 60px;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: #ffda44;
+}
+
 .row > * {
   padding: 0;
 }
-.form {
+.pixel-font-small {
   font-family: "VT323", monospace;
+}
+.form {
   width: 85%;
-  /* width: 300px; */
   border-radius: 10px;
   border-color: #fff;
   margin-right: 2px;
 }
 .button {
-  font-family: "VT323", monospace;
   font-size: 16px;
   border-radius: 10px;
   border-color: #fff;
@@ -39,15 +52,9 @@
   font-size: 30px;
   font-family: "Press Start 2P", cursive;
 }
-ul {
-  list-style: none;
-  padding-left: 0px;
-  padding-inline-start: 0px;
-  line-height: 20px;
-  margin-bottom: 60px;
-}
+
 .weather {
-  margin-right: 10px;
+  margin-right: 60px;
   text-align: center;
 }
 .icon {
@@ -56,14 +63,18 @@ ul {
   margin: 0 auto;
 }
 .local-temp {
+  padding-top: 40px;
+}
+
+.local-temp strong {
+  font-weight: 400;
   margin-top: 45px;
   font-size: 70px;
-  font-family: "VT323", monospace;
 }
-.cel-fah {
+.local-temp small {
   font-size: 25px;
-  margin-top: 90px;
-  font-family: "VT323", monospace;
+  position: relative;
+  top: -36px;
 }
 .cel-fah:hover {
   cursor: pointer;
@@ -90,19 +101,10 @@ ul {
   display: block;
   margin: 0 auto;
 }
-.days-temp {
+.center {
   text-align: center;
 }
 .days-min-temp {
   opacity: 0.8;
-  color: #ffda44;
-}
-.credit {
-  text-align: center;
-}
-a {
-  color: black;
-}
-a:hover {
   color: #ffda44;
 }

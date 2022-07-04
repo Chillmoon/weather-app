@@ -13,7 +13,7 @@ function showTempAndCity(response) {
   let city = document.querySelector(".city");
   let weather = document.querySelector(".weather");
   city.innerHTML = response.data.name;
-  temperature.innerHTML = `${Math.round(response.data.main.temp)}°`;
+  temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   weather.innerHTML = response.data.weather[0].main;
 
   console.log(response.data);
@@ -56,7 +56,7 @@ currentDate.innerHTML = `${
 
 let apiKey = "3f9633a1cb53043419b3d4f859581765";
 
-let temperature = document.querySelector(".local-temp");
+let temperature = document.querySelector(".local-temp strong");
 
 let buttonLocation = document.querySelector(".button-location");
 buttonLocation.addEventListener("click", myLocation);
