@@ -44,6 +44,7 @@ function showTempAndCity(response) {
   let humidity = document.querySelector(".humidity");
   let wind = document.querySelector(".wind");
   let icon = document.querySelector(".icon");
+  celsiusTemperature = response.data.main.temp;
   city.innerHTML = response.data.name;
   temperature.innerHTML = `${Math.round(response.data.main.temp)}`;
   weather.innerHTML = response.data.weather[0].main;
@@ -63,16 +64,18 @@ function searchCity(city) {
 }
 
 function toFahrenheit() {
-  temperature.innerHTML = 77;
+  let fahrenheitTemp = parseInt(celsiusTemperature) * 1.8 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemp);
   fahrenheit.style.color = "#ffda44";
   celsius.style.color = "#fff";
 }
 
 function toCelsius() {
-  temperature.innerHTML = 25;
+  temperature.innerHTML = Math.round(celsiusTemperature);
   fahrenheit.style.color = "#fff";
   celsius.style.color = "#ffda44";
 }
+let celsiusTemperature = null;
 
 let temperature = document.querySelector(".local-temp strong");
 
