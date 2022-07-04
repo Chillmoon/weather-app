@@ -1,14 +1,39 @@
+function displayDate() {
+  let date = new Date();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDate = document.querySelector(".local-time");
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  currentDate.innerHTML = `${days[date.getDay()]} ${hours}:${minutes}`;
+}
+
 function showPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=3f9633a1cb53043419b3d4f859581765`;
   axios.get(url).then(showTempAndCity);
 }
+
 function searchInput(event) {
   event.preventDefault();
   let cityInput = document.querySelector(".form");
   searchCity(cityInput.value);
 }
+
 function myLocation(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
@@ -29,11 +54,11 @@ function showTempAndCity(response) {
     `icons/${response.data.weather[0].icon}.png`
   );
   icon.setAttribute("alt", response.data.weather[0].main);
-  console.log(response.data);
 }
+
 function searchCity(city) {
   let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3f9633a1cb53043419b3d4f859581765&units=${unit}`;
   axios.get(apiUrl).then(showTempAndCity);
 }
 
@@ -49,29 +74,6 @@ function toCelsius() {
   celsius.style.color = "#ffda44";
 }
 
-let date = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let currentDate = document.querySelector(".local-time");
-let hours = date.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = date.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-currentDate.innerHTML = `${days[date.getDay()]} ${hours}:${minutes}`;
-
-let apiKey = "3f9633a1cb53043419b3d4f859581765";
-
 let temperature = document.querySelector(".local-temp strong");
 
 let buttonLocation = document.querySelector(".button-location");
@@ -85,4 +87,5 @@ celsius.addEventListener("click", toCelsius);
 
 let searchEngine = document.querySelector(".search-form");
 searchEngine.addEventListener("submit", searchInput);
+displayDate();
 searchCity("Kyiv");
