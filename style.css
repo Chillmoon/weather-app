@@ -39,9 +39,11 @@
   font-size: 30px;
   font-family: "Press Start 2P", cursive;
 }
-.local-time {
+.time-humidity {
   margin-bottom: 60px;
+  text-indent: 5;
 }
+
 .weather {
   margin-right: 10px;
   text-align: center;
@@ -88,4 +90,7 @@
 }
 .days-temp {
   text-align: center;
+}
+.days-min-temp {
+  opacity: 0.8;
 }
