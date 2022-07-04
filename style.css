@@ -39,11 +39,13 @@
   font-size: 30px;
   font-family: "Press Start 2P", cursive;
 }
-.time-humidity {
+ul {
+  list-style: none;
+  padding-left: 0px;
+  padding-inline-start: 0px;
+  line-height: 20px;
   margin-bottom: 60px;
-  text-indent: 5;
 }
-
 .weather {
   margin-right: 10px;
   text-align: center;
@@ -93,4 +95,14 @@
 }
 .days-min-temp {
   opacity: 0.8;
+  color: #ffda44;
+}
+.credit {
+  text-align: center;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: #ffda44;
 }
