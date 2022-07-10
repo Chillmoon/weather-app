@@ -34,6 +34,31 @@ function searchInput(event) {
   searchCity(cityInput.value);
 }
 
+function showForecast() {
+  let forecastDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecast = document.querySelector(".forecast");
+
+  let forecastHTML = "";
+  forecastDays.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+            <div class="days">${day}</div>
+            <img
+              class="small-icon"
+              src="https://cdn-icons-png.flaticon.com/512/365/365852.png"
+              alt=""
+              width="50px"
+            />
+            <div class="center small-text">
+              25°<span class="days-min-temp"> 11°</span>
+            </div>
+          </div>`;
+    forecast.innerHTML = forecastHTML;
+  });
+}
+showForecast();
+
 function myLocation(event) {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
