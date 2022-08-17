@@ -49,7 +49,7 @@ function showForecast(response) {
   let forecastHTML = "";
   forecast.forEach(function (forecastDay, index) {
     if (index < 7 && index > 0) {
-      forecastHTML += `<div class="col">
+      forecastHTML += `<div class="col-2">
             <div class="days">${formatDate(forecastDay.dt)}</div>
             <img
               class="small-icon"

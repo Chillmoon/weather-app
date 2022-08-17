@@ -18,28 +18,23 @@ a:hover {
   font-family: "VT323", monospace;
 }
 .form {
-  width: 85%;
+  width: 99%;
   border-radius: 10px;
   border-color: #fff;
-  margin-right: 2px;
 }
 .button {
   font-size: 16px;
   border-radius: 10px;
   border-color: #fff;
-}
-.button-location {
-  margin-left: 55px;
-  margin: 0;
+  width: 100%;
 }
 .app-body {
   position: static;
   border: 3px solid fff;
   border-radius: 15px;
-  padding: 30px;
-  width: 50%;
-  max-width: 630px;
-  min-width: 630px;
+  padding: 20px;
+  max-width: 100%;
+  width: 630px;
   display: block;
   margin: auto;
   color: #fff;
@@ -89,9 +84,10 @@ a:hover {
   margin: 0 auto;
 }
 .days {
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
   font-family: "Press Start 2P", cursive;
+  margin-bottom: 5px;
 }
 .small-icon {
   width: 50px;
